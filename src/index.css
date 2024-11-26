@@ -1,0 +1,123 @@
+/* Importação do Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilo Global */
+body {
+  background-color: #f5f8fa; /* Fundo claro, semelhante ao Twitter */
+  color: #14171a; /* Texto em cinza escuro */
+  font-family: 'Roboto', sans-serif; /* Tipografia moderna */
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Estilo da Página Principal */
+.container {
+  max-width: 600px;
+  margin: 0 auto; /* Centralizar conteúdo */
+  padding: 16px;
+}
+
+/* Cabeçalho */
+h1 {
+  font-size: 1.75rem; /* Tamanho de texto grande */
+  font-weight: bold;
+  color: #1da1f2; /* Azul do Twitter */
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Botão de Ação */
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05); /* Pequeno aumento ao passar o mouse */
+}
+
+/* Input e Textarea */
+input,
+textarea {
+  font-size: 1rem;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1da1f2; /* Azul do Twitter */
+  box-shadow: 0 0 4px #1da1f2;
+}
+
+/* Estilo dos Cards de Comentário */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e1e8ed;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #e1e8ed;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card .author {
+  font-weight: bold;
+  color: #14171a;
+}
+
+.card .date {
+  font-size: 0.875rem;
+  color: #657786; /* Cinza claro */
+}
+
+.card .text {
+  margin-top: 8px;
+}
+
+/* Contador de Comentários */
+.comment-count {
+  font-size: 0.875rem;
+  color: #657786; /* Cinza claro */
+  margin-bottom: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .card {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
